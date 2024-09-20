@@ -1,0 +1,70 @@
+public class Televisor {
+
+    private String marca;
+    private int polegadas;
+    private boolean smartTV;
+
+    
+    Televisor() {
+        marca = "Samsung";
+        polegadas = 50;
+        smartTV = true;
+    }
+
+    
+    Televisor(String marca, int polegadas, boolean smartTV) {
+        this.marca = marca;
+        this.polegadas = polegadas;
+        this.smartTV = smartTV;
+    }
+
+    
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public int getPolegadas() {
+        return polegadas;
+    }
+
+    public void setPolegadas(int polegadas) {
+        this.polegadas = polegadas;
+    }
+
+    public boolean isSmartTV() {
+        return smartTV;
+    }
+
+    public void setSmartTV(boolean smartTV) {
+        this.smartTV = smartTV;
+    }
+
+    
+    public static void main(String args[]) {
+        Televisor tv1 = new Televisor();
+        Televisor tv2 = new Televisor("LG", 42, false);
+
+        System.out.println("A marca do tv1 é " + tv1.getMarca());
+        System.out.println("A marca do tv2 é " + tv2.getMarca());
+
+        tv1.setMarca("Sony");
+        tv1.setPolegadas(55);
+        tv1.setSmartTV(true);
+
+        System.out.println("\nO televisor tv1 é " + tv1.getMarca());
+        System.out.println("Com " + tv1.getPolegadas() + " polegadas");
+        System.out.println("É Smart TV? " + tv1.isSmartTV());
+
+        tv2.setMarca("Philips");
+        tv2.setPolegadas(32);
+        tv2.setSmartTV(false);
+
+        System.out.println("\nO televisor tv2 é " + tv2.getMarca());
+        System.out.println("Com " + tv2.getPolegadas() + " polegadas");
+        System.out.println("É Smart TV? " + tv2.isSmartTV());
+    }
+}
