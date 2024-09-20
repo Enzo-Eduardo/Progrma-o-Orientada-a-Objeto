@@ -1,0 +1,73 @@
+package view;
+
+public class Fogao {
+
+    private String marca;
+    private int quantidadeDeBocas;
+    private boolean automatico;
+
+    
+    Fogao() {
+        marca = "Consul";
+        quantidadeDeBocas = 4;
+        automatico = false;
+    }
+
+    
+    Fogao(String marca, int quantidadeDeBocas, boolean automatico) {
+        this.marca = marca;
+        this.quantidadeDeBocas = quantidadeDeBocas;
+        this.automatico = automatico;
+    }
+
+    
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public int getQuantidadeDeBocas() {
+        return quantidadeDeBocas;
+    }
+
+    public void setQuantidadeDeBocas(int quantidadeDeBocas) {
+        this.quantidadeDeBocas = quantidadeDeBocas;
+    }
+
+    public boolean isAutomatico() {
+        return automatico;
+    }
+
+    public void setAutomatico(boolean automatico) {
+        this.automatico = automatico;
+    }
+
+    
+    public static void main(String args[]) {
+        Fogao fg1 = new Fogao();
+        Fogao fg2 = new Fogao("Brastemp", 6, true);
+
+        System.out.println("A marca do fg1 é " + fg1.getMarca());
+        System.out.println("A marca do fg2 é " + fg2.getMarca());
+
+        fg1.setMarca("Electrolux");
+        fg1.setQuantidadeDeBocas(5);
+        fg1.setAutomatico(true);
+
+        System.out.println("\nO fogão fg1 é " + fg1.getMarca());
+        System.out.println("Com " + fg1.getQuantidadeDeBocas() + " bocas");
+        System.out.println("É automático? " + fg1.isAutomatico());
+
+        fg2.setMarca("Dako");
+        fg2.setQuantidadeDeBocas(4);
+        fg2.setAutomatico(false);
+
+        System.out.println("\nO fogão fg2 é " + fg2.getMarca());
+        System.out.println("Com " + fg2.getQuantidadeDeBocas() + " bocas");
+        System.out.println("É automático? " + fg2.isAutomatico());
+    }
+}
+
