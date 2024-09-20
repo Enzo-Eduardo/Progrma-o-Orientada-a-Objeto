@@ -1,0 +1,92 @@
+public class TelevisorComDVD {
+
+    private String marca;
+    private int polegadas;
+    private boolean smartTV;
+    private boolean possuiDVD;
+
+    
+    TelevisorComDVD() {
+        marca = "Samsung";
+        polegadas = 50;
+        smartTV = true;
+        possuiDVD = false;
+    }
+
+    
+    TelevisorComDVD(String marca, int polegadas, boolean smartTV, boolean possuiDVD) {
+        this.marca = marca;
+        this.polegadas = polegadas;
+        this.smartTV = smartTV;
+        this.possuiDVD = possuiDVD;
+    }
+
+    
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public int getPolegadas() {
+        return polegadas;
+    }
+
+    public void setPolegadas(int polegadas) {
+        this.polegadas = polegadas;
+    }
+
+    public boolean isSmartTV() {
+        return smartTV;
+    }
+
+    public void setSmartTV(boolean smartTV) {
+        this.smartTV = smartTV;
+    }
+
+    public boolean isPossuiDVD() {
+        return possuiDVD;
+    }
+
+    public void setPossuiDVD(boolean possuiDVD) {
+        this.possuiDVD = possuiDVD;
+    }
+
+    
+    public static void main(String args[]) {
+        TelevisorComDVD tv1 = new TelevisorComDVD();
+        TelevisorComDVD tv2 = new TelevisorComDVD("LG", 42, false, true);
+
+        System.out.println("A marca do tv1 é " + tv1.getMarca());
+        System.out.println("O televisor tv1 tem " + tv1.getPolegadas() + " polegadas");
+        System.out.println("É Smart TV? " + tv1.isSmartTV());
+        System.out.println("Possui DVD Player? " + tv1.isPossuiDVD());
+
+        System.out.println("\nA marca do tv2 é " + tv2.getMarca());
+        System.out.println("O televisor tv2 tem " + tv2.getPolegadas() + " polegadas");
+        System.out.println("É Smart TV? " + tv2.isSmartTV());
+        System.out.println("Possui DVD Player? " + tv2.isPossuiDVD());
+
+        tv1.setMarca("Sony");
+        tv1.setPolegadas(55);
+        tv1.setSmartTV(true);
+        tv1.setPossuiDVD(true);
+
+        System.out.println("\nO televisor tv1 agora é " + tv1.getMarca());
+        System.out.println("Com " + tv1.getPolegadas() + " polegadas");
+        System.out.println("É Smart TV? " + tv1.isSmartTV());
+        System.out.println("Possui DVD Player? " + tv1.isPossuiDVD());
+
+        tv2.setMarca("Philips");
+        tv2.setPolegadas(32);
+        tv2.setSmartTV(false);
+        tv2.setPossuiDVD(false);
+
+        System.out.println("\nO televisor tv2 agora é " + tv2.getMarca());
+        System.out.println("Com " + tv2.getPolegadas() + " polegadas");
+        System.out.println("É Smart TV? " + tv2.isSmartTV());
+        System.out.println("Possui DVD Player? " + tv2.isPossuiDVD());
+    }
+}
